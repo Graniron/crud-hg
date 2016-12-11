@@ -10,6 +10,7 @@ import { ROUTES } from './app.router';
 import { AddUserComponent } from './components/add-user/add-user.component';
 import { UsersListComponent } from './components/users-list/user-list.component';
 import { EditUserComponent } from './components/edit-user/edit-user.component';
+import { UsersService } from './services/users.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { EditUserComponent } from './components/edit-user/edit-user.component';
     HttpModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [],
+  providers: [UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
