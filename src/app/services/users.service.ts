@@ -19,6 +19,11 @@ export class UsersService {
          .map((res: Response) => res.json());
     }
 
+    createUser(name) {
+       return this.http.post(`${API_ENDPOINT}`, {name})
+         .map((res: Response) => res.json());
+    }
+
     updateUser(user) {
         return this.http.put(`${API_ENDPOINT}/${user.id}`, user)
          .map((res: Response) => res.json());

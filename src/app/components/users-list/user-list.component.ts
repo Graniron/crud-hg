@@ -12,6 +12,7 @@ import { UsersService } from './../../services/users.service';
                <a [routerLink]="['/edit', user.id]">{{user.name}}</a>              
             </li>
         </ul>
+        <button [routerLink]="['/add']">Add</button>  
     `,
 })
 export class UsersListComponent implements OnInit {
