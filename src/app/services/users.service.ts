@@ -13,4 +13,14 @@ export class UsersService {
         return this.http.get(API_ENDPOINT)
          .map((res: Response) => res.json());
     }
+
+    getUser(id) {
+        return this.http.get(`${API_ENDPOINT}/${id}`)
+         .map((res: Response) => res.json());
+    }
+
+    updateUser(user) {
+        return this.http.put(`${API_ENDPOINT}/${user.id}`, user)
+         .map((res: Response) => res.json());
+    }
 }
