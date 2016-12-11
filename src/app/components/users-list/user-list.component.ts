@@ -9,7 +9,8 @@ import { UsersService } from './../../services/users.service';
         <div>Users list</div>
         <ul>
             <li *ngFor="let user of users" >
-               <a [routerLink]="['/edit', user.id]">{{user.name}}</a>              
+               <a [routerLink]="['/edit', user.id]">{{user.name}}</a>  
+               <button (click)="deleteUser(user.id)">x</button>            
             </li>
         </ul>
         <button [routerLink]="['/add']">Add</button>  
@@ -20,8 +21,19 @@ export class UsersListComponent implements OnInit {
     constructor(private userService: UsersService) { }
 
     ngOnInit() {
+        this.getUsers();
+    }
+
+    getUsers() {
         this.userService.getUsers().subscribe(
             users => this.users = users,
+            error => console.error('Error: ', error)
+        )
+    }
+
+    deleteUser(id) {
+        this.userService.deleteUser(id).subscribe(
+            res => this.getUsers(),
             error => console.error('Error: ', error)
         )
     }

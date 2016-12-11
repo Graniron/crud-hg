@@ -28,4 +28,8 @@ export class UsersService {
         return this.http.put(`${API_ENDPOINT}/${user.id}`, user)
          .map((res: Response) => res.json());
     }
+
+    deleteUser(id) {
+        return this.http.delete(`${API_ENDPOINT}/${id}`)        
+    }
 }
