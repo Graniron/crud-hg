@@ -7,12 +7,13 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 
 import { ROUTES } from './app.router';
-import { UserFormComponent } from './components/user-form/user-form.component';
+import { AddUserComponent } from './components/add-user/add-user.component';
 import { UsersListComponent } from './components/users-list/user-list.component';
+import { EditUserComponent } from './components/edit-user/edit-user.component';
 
 @NgModule({
   declarations: [
-    AppComponent, UsersListComponent, UserFormComponent
+    AppComponent, UsersListComponent, AddUserComponent, EditUserComponent
   ],
   imports: [
     BrowserModule,

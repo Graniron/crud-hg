@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'hg-user-form',
     template: `
-        <div>User form</div>
+        <div>Add user</div>
     `
 })
-export class UserFormComponent {}
+export class AddUserComponent {}
