@@ -13,16 +13,20 @@ import { EditUserComponent } from './components/edit-user/edit-user.component';
 import { UsersService } from './services/users.service';
 
 @NgModule({
+  // Declare components
   declarations: [
     AppComponent, UsersListComponent, AddUserComponent, EditUserComponent
   ],
+  // Declare modules
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     RouterModule.forRoot(ROUTES)
   ],
+  // Declare services
   providers: [UsersService],
+  // Specify which component must run first
   bootstrap: [AppComponent]
 })
 export class AppModule { }

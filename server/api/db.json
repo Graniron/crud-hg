@@ -1,7 +1,16 @@
 {
-    "users": [
-        { "id": 1, "name": "Roman Yavoriv" },
-        { "id": 2, "name": "Igor Qwerty" },
-        { "id": 3, "name": "Taras Potter" }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "name": "Roman Yavorivg"
+    },
+    {
+      "id": 3,
+      "name": "Taras Potter"
+    },
+    {
+      "name": "New user777",
+      "id": 4
+    }
+  ]
 }

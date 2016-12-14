@@ -9,4 +9,5 @@ if (environment.production) {
   enableProdMode();
 }
 
+// get an Angular app up and make it possible run in the browser.
 platformBrowserDynamic().bootstrapModule(AppModule);
