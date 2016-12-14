@@ -16,10 +16,10 @@ import { UsersService } from './../../services/users.service';
                <!-- [routerLink] - make link to route, {{}} - interpolation -->
                <a [routerLink]="['/edit', user.id]">{{user.name}}</a>  
                 <!-- On click event invoke deleteUser method --> 
-               <button (click)="deleteUser(user.id)">x</button>            
+               <button class="btn btn-danger" (click)="deleteUser(user.id)">x</button>            
             </li>
         </ul>
-        <button [routerLink]="['/add']">Add</button>  
+        <button class="btn btn-primary" [routerLink]="['/add']">Add</button>  
     `,
 })
 export class UsersListComponent implements OnInit {
@@ -30,6 +30,7 @@ export class UsersListComponent implements OnInit {
 
     // Lifecycle hook, which is called after initializing the component
     ngOnInit() {
+        console.log($('.btn-primary'));
         this.getUsers();
     }
 
