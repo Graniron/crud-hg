@@ -33,7 +33,7 @@ export class EditUserComponent implements OnInit {
 
     getUser() {
          this.user = this.userService.getUser(this.userId).subscribe(
-                    (user) => this.user = user,
+                    (user) => user,
                     error => console.error(error)
                 )
     }
