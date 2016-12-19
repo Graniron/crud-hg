@@ -40,7 +40,7 @@ export class EditUserComponent implements OnInit {
     // Call service to get individual user data by id
     getUser() {
         this.user = this.userService.getUser(this.userId).subscribe(
-            (user) => this.user = user,
+            (user) => user,
             error => console.error(error)
         );
     }
